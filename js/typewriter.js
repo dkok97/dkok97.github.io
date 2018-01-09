@@ -13,12 +13,21 @@ var TxtType = function(el, toRotate, period) {
         var fullTxt = this.toRotate[i];
 
         if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
+          this.txt = fullTxt.substring(0, this.txt.length - 1);
+
+          if (this.txt=="Happy ") {
+            this.isDeleting=false
+            this.loopNum=this.loopNum+1;
+          }
+
           if (this.txt=="Happy Exploring"){
             return
           }
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
+
+        }
+
+        else {
+          this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
 
         this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
