@@ -50,11 +50,17 @@ a:active {
 /* ------------ body ------------ */
 
 
+.nav-wrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+
+}
 
 .typewrite
 {
   position: relative;
-  margin-left: 45%;
+  margin-right: 20px;
   font-family: 'Roboto' !important;;
   font-weight: 200 !important;;
   font-size: 180% !important;;
